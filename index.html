@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome -->
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <!-- font awesome -->
+</head>
+<body>
+    <div class="main-container">
+     <div class="main-container-contaienr">
+        <div class="container padd">
+            <div class="search">
+                <input class="city-input" type="text" placeholder="search city">
+                <i class="fa-solid fa-magnifying-glass" id="search-btn"></i>
+            </div>
+        </div>
+        <section style="display: none;"> 
+          <!-- location -->
+
+        <div class="container padd">
+            <div class="location">
+                <i class="fa-solid fa-location-dot text-font"></i>
+                <p class="country-name text-font" id="city-name">Bangladesh</p>
+            </div>
+             <p class="current-date text-font">mon , 11 Aug</p>
+        </div>
+
+        <!-- locaion end -->
+        
+        <!-- cloud -->
+
+        <div class="container padd">
+            <img class="cloud-img" src="./weather/clouds.svg" alt="">
+            <div class="cloud-celsius">
+                <p class="censius text-font">30 ℃</p>
+                <p class="current-sky text-font">clouds</p>
+            </div>
+        </div>
+
+        <!-- cloud end -->
+
+        <!-- Humidity  -->
+
+         <div class="container padd">
+            <div class="humidity-containe text-font">
+                <i class="fa-solid fa-droplet"></i>
+                <div class="humidity-text ">
+                    <p id="humidity">Humidity</p>
+                    <p id="humidity-percentage">74%</p>
+                </div>
+            </div>
+
+            <div class="wind text-font">
+                <i class="fa-solid fa-wind"></i>
+                <div class="wind-speed">
+                    <p id="wind">Wind speed</p>
+                    <p id="wind-speed">4.12 M/s</p>
+                </div>
+            </div>
+         </div>
+
+        <!-- Humidity end -->
+
+        <!-- weather forecast -->
+
+        <div class="forecast-container">
+            <div class="forecast-item text-font">
+                <p>05 Aug</p>
+                <img src="./weather/thunderstorm.svg" alt="">
+                <p>39℃</p>
+            </div>
+
+            <div class="forecast-item text-font">
+                <p>05 Aug</p>
+                <img src="./weather/thunderstorm.svg" alt="">
+                <p>39℃</p>
+            </div>
+
+            <div class="forecast-item text-font">
+                <p>05 Aug</p>
+                <img src="./weather/thunderstorm.svg" alt="">
+                <p>39℃</p>
+            </div>
+
+            <div class="forecast-item text-font">
+                <p>05 Aug</p>
+                <img src="./weather/thunderstorm.svg" alt="">
+                <p>39℃</p>
+            </div>
+        </div> 
+        <!-- weather forecast end -->
+         </section> 
+  
+         <!-- search city -->
+
+       <div class="search-city-container">
+        <div class="search-city search-text">
+            <img src="./message/search-city.png" alt="search image">
+            <h2>Search City</h2>
+            <p>Find out the weather condition of <br> the city</p>
+        </div>
+       </div>
+
+         <!-- search city end -->
+          <!-- not find  -->
+
+        <div class="not-found-city" style="display: none;">
+        <div class="not-found search-text">
+            <img src="./message/not-found.png" alt="search image">
+            <h2>Search City</h2>
+            <p>Find out the weather condition of <br> the city</p>
+        </div>
+       </div>
+      <!-- not find end -->
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    height: 100vh;
+    background-image: url('./bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* main-container */
+
+.main-container
+{
+    position: relative;
+    height: 600px;
+    width: 380px;
+    background: linear-gradient(
+        to top, rgb(0,0,0,0.15),
+        rgb(255,255, 255 , 0.15)
+    );
+    backdrop-filter: blur(15);
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+   border-radius: 15px;
+}
+
+
+.main-container::before
+{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   left: 0;
+   border-radius: 20px;
+   pointer-events: none;
+}
+
+/* input seciotn */
+
+.padd
+{
+    padding: 1rem 0 1rem 0;
+}
+
+.main-container-contaienr{
+   padding: 0rem 1rem 0rem 1rem;
+}
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 1rem; */
+}
+
+.search{
+    position: relative;
+    width: 340px;
+}
+
+
+.search input
+{
+    padding: 1rem 3rem 1rem 1rem;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+    border: 3px solid transparent;
+    background: #698DA2 ;
+    border-radius: 25px;
+    color: white;
+    transition: 0.25s border;
+}
+
+.search input::placeholder
+{
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.search input:focus
+{
+    border: 3px solid rgba(0, 0 , 0 ,0.25);
+}
+
+.search i
+{
+    position: absolute;
+    top: 30%;
+    right: 1.2rem;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* input section end */
+
+
+.text-font
+{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #F8FFFF;
+    cursor: pointer;
+}
+
+.location
+{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.cloud-img
+{
+    width: 150px;
+    height: 150px;
+}
+
+.cloud-celsius .text-font
+{
+    font-size: 1.5rem;
+}
+
+/* humidity */
+
+.humidity-containe
+{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.humidity-containe .text-font,
+.wind .text-font
+{
+    font-size: 2rem;
+}
+
+
+.wind {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* forecast */
+
+.forecast-container{
+    display: flex;
+    gap: 10px;
+    overflow: scroll;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+}
+
+.forecast-container::-webkit-scrollbar{
+    height: 8px;
+}
+
+.forecast-container::-webkit-scrollbar-track{
+    background-color: rgb(0, 0,0,0.1);
+    border-radius: 99px;
+}
+
+.forecast-container::-webkit-scrollbar-thumb{
+    width: 100px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(200,200,200,0.6));
+    border-radius: 99px;
+}
+
+.forecast-item
+{
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(0, 0,0,0.1);
+    border-radius: 16px;
+    padding: 1rem;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.forecast-item img
+{
+    height: 60px;
+    width: 60px;
+}
+
+
+/* search  */
+
+.search-city
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-city img
+{
+    height: 300px;
+    margin-top: 10%;
+}
+
+
+.search-city h2
+{
+    text-align: center;
+    padding: 1rem 0 0 0;
+    font-size: 1.8rem;
+    color: #F8FFFF;
+}
+
+
+.search-city p
+{
+    text-align: center;
+    font-size: 16px;
+    color: #F8FFFF;
+}
+ 
+/* not found */
+
+.not-found
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.not-found img
+{
+    height: 300px;
+    margin-top: 10%;
+}
+
+.not-found h2
+{
+    text-align: center;
+    padding: 1rem 0 0 0;
+    font-size: 1.8rem;
+    color: #F8FFFF;
+}
+
+
+.not-found p
+{
+    text-align: center;
+    font-size: 16px;
+    color: #F8FFFF;
+}
