@@ -81,7 +81,7 @@ async function getForecastData(city) {
 }
 
 function  getUpdateItem(weatherData){
-     const {
+     const  {
         dt_txt: date,
         weather: [{id}],
         main: { temp }
@@ -105,7 +105,7 @@ function  getUpdateItem(weatherData){
     foreCastContainer.insertAdjacentHTML('beforeend', forecastItem);
 
 }
-console.log( foreCastContainer)
+
 
 function getCurrentDate(){
   const today = new Date()
@@ -134,3 +134,4 @@ function showDisplaySection(section){
     .forEach(section => section.style.display = 'none')
     section.style.display = 'grid'
 }
+
